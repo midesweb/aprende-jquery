@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ejemplo jQuery</title>
+    <style>
+    
+    #cookies{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #666;
+        font-size: 1.2em;
+        text-align: center;
+        color: #fff;
+    }
+    
+    #cookies a{
+        color: #ff9;
+        background-color: #000;
+        padding: 6px;
+        border: 1px solid #333;
+    }
+       
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplito</h1>
+    <div id="cookies"> Este sitio utiliza cookies... <a href="pagina-que-genera-cookie-php-redirecciona-al-origen.php">Cerrar</a></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum optio quod quis autem culpa. Veritatis hic aut alias laborum veniam doloribus sequi non distinctio omnis delectus voluptate eligendi officia facilis.</p>
+    <p>Sed tempora a aliquid quas deserunt maxime perferendis nobis accusamus quibusdam pariatur soluta ex cupiditate fugiat officiis molestiae tenetur sunt nemo quae perspiciatis nihil nam autem eum culpa aliquam sit.</p>
+    <p>Vitae voluptatem aperiam deserunt earum quae veniam quo mollitia quasi beatae magni minima eaque harum fugit quam dolorum tenetur dignissimos vero expedita unde natus sint similique ex aspernatur reprehenderit doloremque.</p>
+    <p>Architecto commodi quis sunt quidem corrupti consectetur enim veritatis reiciendis modi atque perspiciatis esse mollitia assumenda dicta alias obcaecati harum voluptas minima ducimus earum tenetur nam ratione tempora sapiente libero.</p>
+    <p>Quisquam rerum deleniti nostrum optio atque assumenda quod deserunt beatae tempora officia molestias eius? Corporis assumenda dolorem excepturi maiores unde esse explicabo minima repudiandae praesentium deleniti repellendus est repellat omnis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum optio quod quis autem culpa. Veritatis hic aut alias laborum veniam doloribus sequi non distinctio omnis delectus voluptate eligendi officia facilis.</p>
+    <p>Sed tempora a aliquid quas deserunt maxime perferendis nobis accusamus quibusdam pariatur soluta ex cupiditate fugiat officiis molestiae tenetur sunt nemo quae perspiciatis nihil nam autem eum culpa aliquam sit.</p>
+    <p>Vitae voluptatem aperiam deserunt earum quae veniam quo mollitia quasi beatae magni minima eaque harum fugit quam dolorum tenetur dignissimos vero expedita unde natus sint similique ex aspernatur reprehenderit doloremque.</p>
+    <p>Architecto commodi quis sunt quidem corrupti consectetur enim veritatis reiciendis modi atque perspiciatis esse mollitia assumenda dicta alias obcaecati harum voluptas minima ducimus earum tenetur nam ratione tempora sapiente libero.</p>
+    <p>Quisquam rerum deleniti nostrum optio atque assumenda quod deserunt beatae tempora officia molestias eius? Corporis assumenda dolorem excepturi maiores unde esse explicabo minima repudiandae praesentium deleniti repellendus est repellat omnis.</p>
+    
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        //onload ejcutar después que la página termina de cargar!!!! imagenes, frames, iframes, css, etc.
+        
+        $(document).on("ready", function(){
+           
+           $("#cookies a").on("click", ocultaMensaje);
+            
+            //$(window).on("scroll", ocultaMensaje);
+            
+            function ocultaMensaje(objEvento){
+                objEvento.preventDefault();
+                $("#cookies").delay(1000).slideUp(3000);
+            }
+        });
+        
+    </script>
+    
+</body>
+</html>
