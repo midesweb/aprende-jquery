@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ejemplo jQuery</title>
+    <style>
+        #micapa{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .error{
+            color: red;
+            background: #fcc;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="micapa">Hola mundo!!!</div>
+    contenido............................
+    
+    <P class="parrafo">dfsdfsdf</P>
+    <P>sdfsdf</P>
+    <P class="parrafo">sdfsdf</P>
+    <P>sdfsdfsdf sdf dsf </P>
+    <P class="parrafo">sd fdssdfsdf</P>
+    
+    <div class="parrafo">efefertertgegergtrrthty thth etyj</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        //onload ejcutar después que la página termina de cargar!!!! imagenes, frames, iframes, css, etc.
+        
+        $(document).ready(funcion(){
+            //codigo a ejecutar cuando tu navegador esté listo
+            //JQUERY
+            $("#micapa").addClass('error');
+            
+            $("p.parrafo").css("color", "#0f0");
+        });
+        
+    </script>
+</body>
+</html>
