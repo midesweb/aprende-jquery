@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+    <style type="text/css">
+       #cargando {
+        display: none;
+       }
+    </style>
+    
+</head>
+
+<body>
+
+<a href="#" id="enlaceajax">Traer Ajax</a>
+
+<div id="contenido"></div>
+
+<div id="cargando">
+    <img src="loading.gif">
+</div>
+
+<form name="formulario" id="f1">
+    Ciudad: <input type="text" name="ciudad" value="Value del elemento">
+    <br>
+    Barrio: <input type="text" name="barrio" value="Value del elemento">
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#enlaceajax").on("click", function(e){
+                e.preventDefault();
+                $("#contenido").load("trae-esto-por-ajax.php");
+            });
+            $(document).ajaxStart(function(){
+                $("#cargando").css("display", "block");
+            });
+            $(document).ajaxComplete(function(){
+                $("#cargando").css("display", "none");
+            });
+            
+            
+            $("#f1").on("submit", function(e){
+                e.preventDefault();
+                $.post("envia.php", $("#f1").serialize(), function(respuesta){
+                    $("#contenido").html(respuesta);
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>

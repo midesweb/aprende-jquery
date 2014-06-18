@@ -6,21 +6,27 @@
     <style type="text/css">
        
     </style>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-         
-
-        });
-    </script>
+    
 </head>
 
 <body>
-
+    <div id="s">dggdfgd dgfgd</div>
+    $("#s").text()
 <form name="formulario">
     <input type="text" name="elem" id="idelem" value="Value del elemento">
 </form>
 
-
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            alert(window.document.formulario.elem.value);
+            alert(document.getElementById("idelem").value);
+            
+            alert($("#idelem").val());
+            alert($("[name=elem]").val());
+            
+        });
+    </script>
 </body>
 </html>
